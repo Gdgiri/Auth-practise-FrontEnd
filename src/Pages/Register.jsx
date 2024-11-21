@@ -4,6 +4,7 @@ import { registerUser, clearError } from "../Redux/Slice/authSlice";
 import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -147,6 +148,7 @@ const Register = () => {
               >
                 {loading ? "Registering..." : "Register"}
               </button>
+              <Link to="/login" >Login</Link>
             </Form>
           )}
         </Formik>
